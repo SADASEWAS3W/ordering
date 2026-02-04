@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>在线点餐</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      // 自动重定向到index.html
+      const path = window.location.pathname;
+      if (path.includes('404') || path.endsWith('.html')) {
+        const newPath = path.replace('/404.html', '').replace(/\.html$/, '');
+        window.location.href = window.location.origin + newPath + '/index.html';
+      }
+    </script>
+  </body>
+</html>
